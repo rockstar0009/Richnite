@@ -18,7 +18,7 @@ namespace CryptoNote {
 namespace parameters {
 
 const uint64_t DIFFICULTY_TARGET                             = 25; // seconds
-const uint64_t DIFFICULTY_TARGET_V2                          = 25; // seconds
+const uint64_t DIFFICULTY_TARGET_V2                          = 360; // seconds
   
 /* Height to swap to DIFFICULTY_TARGET_V2 */
 const uint64_t DIFFICULTY_TARGET_V2_HEIGHT                   = 270000; // Date of fork is Sunday, June 23, 2019
@@ -36,7 +36,7 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 11;
 const uint64_t MONEY_SUPPLY                                  = UINT64_C(10000000000000000);
 
 const uint32_t EMISSION_SPEED_FACTOR                         = 23;
-const uint32_t EMISSION_SPEED_FACTOR_V2                      = 24;
+const uint32_t EMISSION_SPEED_FACTOR_V2                      = 20;
 
   
 static_assert(EMISSION_SPEED_FACTOR    <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
@@ -71,7 +71,7 @@ static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) !
 const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1545261161;
 
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
-const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 100000; //size of block (bytes) after which reward for block calculated using block size
+const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 800000; //size of block (bytes) after which reward for block calculated using block size
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2  = 20000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 10000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
@@ -95,10 +95,10 @@ const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 24 * 60 * 60 / DI
 const uint64_t DIFFICULTY_WINDOW                             = 60;
 const uint64_t DIFFICULTY_BLOCKS_COUNT                       = DIFFICULTY_WINDOW + 1;
 
-const size_t   MAX_BLOCK_SIZE_INITIAL                        = 100000;
+const size_t   MAX_BLOCK_SIZE_INITIAL                        = 800000;
 const uint64_t MAX_BLOCK_SIZE_GROWTH_SPEED_NUMERATOR         = 100 * 1024;
 const uint64_t MAX_BLOCK_SIZE_GROWTH_SPEED_DENOMINATOR       = 365 * 24 * 60 * 60 / DIFFICULTY_TARGET;
-const uint64_t MAX_EXTRA_SIZE                                = 140000;
+const uint64_t MAX_EXTRA_SIZE                                = 840000;
 const uint64_t MAX_EXTRA_SIZE_V2                             = 1024;
 const uint64_t MAX_EXTRA_SIZE_V2_HEIGHT                      = 700000;
 
@@ -142,7 +142,7 @@ const uint64_t FORK_HEIGHTS_SIZE = sizeof(FORK_HEIGHTS) / sizeof(*FORK_HEIGHTS);
 
 /* The index in the FORK_HEIGHTS array that this version of the software will
    support. For example, if CURRENT_FORK_INDEX is 3, this version of the
-   software will support the fork at block height 1,000,000.
+   software will support the fork at block height 270,000.
    This will default to zero if the FORK_HEIGHTS array is empty, so you don't
    need to change it manually. */
 const uint8_t CURRENT_FORK_INDEX = FORK_HEIGHTS_SIZE == 0 ? 0 : SOFTWARE_SUPPORTED_FORK_INDEX;
