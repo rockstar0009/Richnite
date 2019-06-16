@@ -1,7 +1,7 @@
 // Copyright (c) 2018, The TurtleCoin Developers
-// Copyright (c) 2019, The DeroGold Association 
+// Copyright (c) 2018, The DeroGold Association
 // Copyright (c) 2019, The TurtleGold Developers
-// Copyright (c) 2019, The Richnite Developers
+// 
 // Please see the included LICENSE file for more information.
 
 #pragma once
@@ -25,29 +25,27 @@ namespace WalletConfig
     const std::string addressBookFilename = ".addressBook.json";
 
     /* The name of your deamon */
-    const std::string daemonName = "richnited";
+    const std::string daemonName = "Richnited";
 
     /* The name to call this wallet */
     const std::string walletName = "zedwallet";
 
     /* The name of service/walletd, the programmatic rpc interface to a
        wallet */
-    const std::string walletdName = "richonite-service"; //(walletd)
+    const std::string walletdName = "Richnite-service";
 
     /* The full name of your crypto */
-        const std::string coinName = std::string(CryptoNote::CRYPTONOTE_NAME); 
+    const std::string coinName = std::string(CryptoNote::CRYPTONOTE_NAME);
 
     /* Where can your users contact you for support? E.g. discord */
-    const std::string contactLink = "https://discord.gg/BXAn8uk";
-
+    const std::string contactLink = "https://discord.gg/YK38jHp";
 
     /* The number of decimals your coin has */
     const uint8_t numDecimalPlaces = CryptoNote::parameters
                                                ::CRYPTONOTE_DISPLAY_DECIMAL_POINT;
 
-
     /* The length of a standard address for your coin */
-    const uint16_t standardAddressLength = 80;
+    const uint16_t standardAddressLength = 97;
 
     /* The length of an integrated address for your coin - It's the same as
        a normal address, but there is a paymentID included in there - since
@@ -72,28 +70,9 @@ namespace WalletConfig
     /* If a mixin of zero is disabled, at what height was it disabled? E.g.
        fork height, or 0, if never allowed. This is ignored if a mixin of
        zero is allowed */
-    const uint64_t mixinZeroDisabledHeight
-        = CryptoNote::parameters::MIXIN_LIMITS_V2_HEIGHT;
+    const uint64_t mixinZeroDisabledHeight = 0;
 
     /* Should we process coinbase transactions? We can skip them to speed up
        syncing, as most people don't have solo mined transactions */
-const bool processCoinbaseTransactions = true;
-
-
-
-    /**
-     * Max size of a post body response - 10MB
-     * Will decrease the amount of blocks requested from the daemon if this
-     * is exceeded.
-     * Note - blockStoreMemoryLimit - maxBodyResponseSize should be greater
-     * than zero, or no data will get cached.
-     * Further note: Currently blocks request are not decreased if this is
-     * exceeded. Needs to be implemented in future?
-     */
-    const size_t maxBodyResponseSize = 1024 * 1024 * 10;
-
-    /**
-     * The amount of memory to use storing downloaded blocks - 50MB
-     */
-    const size_t blockStoreMemoryLimit = 1024 * 1024 * 50;
+    const bool processCoinbaseTransactions = true;
 }
