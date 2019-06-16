@@ -18,10 +18,10 @@ namespace CryptoNote {
 namespace parameters {
 
 const uint64_t DIFFICULTY_TARGET                             = 25; // seconds
-const uint64_t DIFFICULTY_TARGET_V2                          = 25; // seconds
+const uint64_t DIFFICULTY_TARGET_V2                          = 50; // seconds
   
 /* Height to swap to DIFFICULTY_TARGET_V2 */
-const uint64_t DIFFICULTY_TARGET_V2_HEIGHT                   = 100000; // placeholder, this fork does nothing anyway
+const uint64_t DIFFICULTY_TARGET_V2_HEIGHT                   = 100000; // fix blocktime 
 
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = (size_t)(-1);
@@ -44,7 +44,7 @@ static_assert(EMISSION_SPEED_FACTOR_V2 <= 8 * sizeof(uint64_t), "Bad EMISSION_SP
 
  
 /* Height to swap to EMISSION_SPEED_FACTOR_V2 */
-const uint64_t EMISSION_SPEED_FACTOR_V2_HEIGHT               = 100000; // placeholder, does nothing 
+const uint64_t EMISSION_SPEED_FACTOR_V2_HEIGHT               = 100000;
 
 /* Premine amount */
 const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(100000000000); // premine of 1%
@@ -132,7 +132,7 @@ static_assert(UPGRADE_VOTING_WINDOW > 1, "Bad UPGRADE_VOTING_WINDOW");
 /* Block heights we are going to have hard forks at */
 const uint64_t FORK_HEIGHTS[] =
 {
-    100000 //placeholder
+    100000 // fix blocktime
 };
 
 /* MAKE SURE TO UPDATE THIS VALUE WITH EVERY MAJOR RELEASE BEFORE A FORK */
