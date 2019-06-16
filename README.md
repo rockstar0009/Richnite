@@ -3,7 +3,7 @@
 
 ### Installing
 
-We offer binary images of the latest releases here: https://github.com/turtlegold/TurtleGold/releases
+We offer binary images of the latest releases here: https://github.com/richonite-project/richonite/releases
 
 If you would like to compile yourself, read on.
 
