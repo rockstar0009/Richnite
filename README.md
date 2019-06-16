@@ -1,4 +1,4 @@
-![image](https://media.discordapp.net/attachments/589835363091087385/589836873720135690/Picture10000.png?width=400&height=173)
+![image](https://media.discordapp.net/attachments/589835363091087385/589837465100222464/Picture100000000.png?width=400&height=178)
 
 ### Installing
 
