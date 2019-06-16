@@ -22,7 +22,8 @@ const uint64_t DIFFICULTY_TARGET_V2                          = 25; // seconds
   
 /* Height to swap to DIFFICULTY_TARGET_V2 */
 const uint64_t DIFFICULTY_TARGET_V2_HEIGHT                   = 100000; // placeholder, this fork does nothing anyway
- 
+
+const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = (size_t)(-1);
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = (size_t)(-1);
 const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x2fa313;
