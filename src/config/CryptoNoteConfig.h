@@ -61,7 +61,7 @@ TurtleGoldd --print-genesis-tx --genesis-block-reward-address
 * Recompile, setup your seed nodes, and start mining
 * You should see your premine appear in the previously generated wallet.
 */
-const char     GENESIS_COINBASE_TX_HEX[]                     = "017801ff00010002a40e83f44198285b3036a7ccef7ff155375b34c7cc8552ceea8721aefa8229752101aaad54aade16d9a4542e0efb3fdf32d86daadc16f1c07f1e363dd0e152a81def";
+const char GENESIS_COINBASE_TX_HEX[] = "010501ff000180d0dbc3f40202d4d66683d6cd1c9531dbf1e381123999fd3bcad2cab69ddb0ab48bdd67c40dea210106bfa110f824a50521233733663f939992ef5d7949ed7e46a030a8a3f53e399c";
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 
 /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
