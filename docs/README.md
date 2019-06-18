@@ -34,6 +34,6 @@ With Quick transactions, privacy and unlimited Blocksize make this coin perfect 
 ## Support or Contact
 
 
-***FEEL FREE TO ASK QUESTION IN DISCORD JOIN TOADY***
+***FEEL FREE TO ASK QUESTION IN DISCORD JOIN TODAY***
 
 ### [JOIN DISCORD](https://discord.gg/m7rdznM)
