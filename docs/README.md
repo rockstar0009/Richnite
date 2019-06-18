@@ -5,7 +5,8 @@
 
 **Richnite [RICH] is an ASIC resistant.
 With Quick transactions, privacy and unlimited Blocksize make this coin perfect for paying anyone, anywhere.
-"RICH" is the youngest coin to ever be listed on an exchange, We have builds for Windows, Apple, and Ubuntu Linux.**
+
+**"RICH" is the youngest coin to ever be listed on an exchange, We have builds for Windows, Apple, and Ubuntu Linux.**
 
 
 ## SPECIFICATION OF RICHNITE: 
