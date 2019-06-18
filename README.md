@@ -30,7 +30,7 @@ If you are using Clang, you will need Clang 6.0 or higher. You will also need li
 - `export CC=gcc-8`
 - `export CXX=g++-8`
 - `git clone -b master --single-branch https://github.com/richnite-project/Richnite`
-- `cd turtlegold`
+- `cd richnited`
 - `mkdir build`
 - `cd build`
 - `cmake ..`
@@ -64,7 +64,7 @@ You need to modify the below command for your version of ubuntu - see https://ap
 - `export CC=clang-6.0`
 - `export CXX=clang++-6.0`
 - `git clone -b master --single-branch https://github.com/richnite-project/Richnite`
-- `cd turtlegold`
+- `cd richnite`
 - `mkdir build`
 - `cd build`
 - `cmake ..`
@@ -73,7 +73,7 @@ You need to modify the below command for your version of ubuntu - see https://ap
 The binaries will be in the `src` folder when you are complete.
 
 - `cd src`
-- `./TurtleGoldd --version`
+- `./Richnited --version`
 
 ##### Generic Linux
 
@@ -83,7 +83,7 @@ If you want to use clang, ensure you set the environment variables `CC` and `CXX
 See the ubuntu instructions for an example.
 
 - `git clone -b master --single-branch https://github.com/richnite-project/Richnite`
-- `cd turtlegold`
+- `cd richnite`
 - `mkdir build`
 - `cd build`
 - `cmake ..`
@@ -92,7 +92,7 @@ See the ubuntu instructions for an example.
 The binaries will be in the `src` folder when you are complete.
 
 - `cd src`
-- `./TurtleGoldd --version`
+- `./Richnited --version`
 
 #### OSX/Apple, using GCC
 
@@ -107,7 +107,7 @@ The binaries will be in the `src` folder when you are complete.
 - `export CC=gcc-8`
 - `export CXX=g++-8`
 - `git clone -b master --single-branch https://github.com/richnite-project/Richnite`
-- `cd turtlegold`
+- `cd richnite`
 - `mkdir build`
 - `cd build`
 - `cmake ..`
@@ -116,7 +116,7 @@ The binaries will be in the `src` folder when you are complete.
 The binaries will be in the `src` folder when you are complete.
 
 - `cd src`
-- `./TurtleGoldd --version`
+- `./Richnited --version`
 
 #### OSX/Apple, using Clang
 
@@ -131,7 +131,7 @@ The binaries will be in the `src` folder when you are complete.
 - `export CC=/usr/local/opt/llvm/bin/clang`
 - `export CXX=/usr/local/opt/llvm/bin/clang++`
 - `git clone -b master --single-branch https://github.com/richnite-project/Richnite`
-- `cd turtlegold`
+- `cd richnite`
 - `mkdir build`
 - `cd build`
 - `cmake ..`
@@ -154,7 +154,7 @@ The binaries will be in the `src` folder when you are complete.
 ##### Building
 
 - From the start menu, open 'x64 Native Tools Command Prompt for vs2017'.
-- `cd <your_turtle_gold_directory>`
+- `cd <your_richnite_directory>`
 - `mkdir build`
 - `cd build`
 - `set PATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin";%PATH%`
@@ -162,13 +162,13 @@ The binaries will be in the `src` folder when you are complete.
 
 If you have errors on this step about not being able to find the following static libraries, you may need to update your cmake. Open 'Visual Studio Installer' and click 'Update'.
 
-- `MSBuild TurtleGold.sln /p:Configuration=Release /m`
+- `MSBuild Richnite.sln /p:Configuration=Release /m`
 
 The binaries will be in the `src/Release` folder when you are complete.
 
 - `cd src`
 - `cd Release`
-- `TurtleGoldd.exe --version`
+- `Richnited.exe --version`
 
 #### Raspberry Pi 3 B+ (AARCH64/ARM64)
 The following images are known to work. Your operation system image **MUST** be 64 bit.
