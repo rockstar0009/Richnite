@@ -39,7 +39,7 @@ If you are using Clang, you will need Clang 6.0 or higher. You will also need li
 The binaries will be in the `src` folder when you are complete.
 
 - `cd src`
-- `./TurtleGoldd --version`
+- `./Richnited --version`
 
 ##### Ubuntu, using Clang
 
