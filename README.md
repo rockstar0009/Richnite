@@ -29,7 +29,7 @@ If you are using Clang, you will need Clang 6.0 or higher. You will also need li
 - `sudo pip install cmake`
 - `export CC=gcc-8`
 - `export CXX=g++-8`
-- `git clone -b master --single-branch https://github.com/turtlegold/TurtleGold`
+- `git clone -b master --single-branch https://github.com/richnite-project/Richnite`
 - `cd turtlegold`
 - `mkdir build`
 - `cd build`
@@ -63,7 +63,7 @@ You need to modify the below command for your version of ubuntu - see https://ap
 - `sudo pip install cmake`
 - `export CC=clang-6.0`
 - `export CXX=clang++-6.0`
-- `git clone -b master --single-branch https://github.com/turtlegold/TurtleGold`
+- `git clone -b master --single-branch https://github.com/richnite-project/Richnite`
 - `cd turtlegold`
 - `mkdir build`
 - `cd build`
@@ -82,7 +82,7 @@ Ensure you have the dependencies listed above.
 If you want to use clang, ensure you set the environment variables `CC` and `CXX`.
 See the ubuntu instructions for an example.
 
-- `git clone -b master --single-branch https://github.com/turtlegold/TurtleGold`
+- `git clone -b master --single-branch https://github.com/richnite-project/Richnite`
 - `cd turtlegold`
 - `mkdir build`
 - `cd build`
@@ -106,7 +106,7 @@ The binaries will be in the `src` folder when you are complete.
 - `brew install --force cmake boost llvm gcc@8`
 - `export CC=gcc-8`
 - `export CXX=g++-8`
-- `git clone -b master --single-branch https://github.com/turtlegold/TurtleGold`
+- `git clone -b master --single-branch https://github.com/richnite-project/Richnite`
 - `cd turtlegold`
 - `mkdir build`
 - `cd build`
@@ -130,7 +130,7 @@ The binaries will be in the `src` folder when you are complete.
 - `brew install --force cmake boost llvm`
 - `export CC=/usr/local/opt/llvm/bin/clang`
 - `export CXX=/usr/local/opt/llvm/bin/clang++`
-- `git clone -b master --single-branch https://github.com/turtlegold/TurtleGold`
+- `git clone -b master --single-branch https://github.com/richnite-project/Richnite`
 - `cd turtlegold`
 - `mkdir build`
 - `cd build`
@@ -140,7 +140,7 @@ The binaries will be in the `src` folder when you are complete.
 The binaries will be in the `src` folder when you are complete.
 
 - `cd src`
-- `./TurtleGoldd --version`
+- `./Richnited --version`
 
 
 #### Windows
@@ -183,8 +183,8 @@ Once you have a 64 bit image installed, setup proceeds the same as any Linux dis
 
 ##### Building
 
-- `git clone -b master --single-branch https://github.com/turtlegold/TurtleGold`
-- `cd turtlegold`
+- `git clone -b master --single-branch https://github.com/richnite-project/Richnite`
+- `cd Richnite`
 - `mkdir build`
 - `cd build`
 - `cmake ..`
@@ -193,7 +193,7 @@ Once you have a 64 bit image installed, setup proceeds the same as any Linux dis
 The binaries will be in the `src` folder when you are complete.
 
 - `cd src`
-- `./TurtleGoldd --version`
+- `./Richnited --version`
 
 #### Thanks
 Cryptonote Developers, Bytecoin Developers, Monero Developers, Forknote Project, TurtleCoin Community, TurtleGold Developers
