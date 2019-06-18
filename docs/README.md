@@ -4,8 +4,7 @@
 ![Image](https://cdn.discordapp.com/attachments/589835363091087385/589837465100222464/Picture100000000.png)
 
 **Richnite [RICH] is an ASIC resistant.
-With Quick transactions, privacy and unlimited Blocksize make this coin perfect for paying anyone, anywhere.
-
+With Quick transactions, privacy and unlimited Blocksize make this coin perfect for paying anyone, anywhere.**
 **"RICH" is the youngest coin to ever be listed on an exchange, We have builds for Windows, Apple, and Ubuntu Linux.**
 
 
