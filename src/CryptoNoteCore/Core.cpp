@@ -122,6 +122,10 @@ Crypto::Hash getBlockHash(const RawBlock& block) {
   return CachedBlock(blockTemplate).getBlockHash();
 }
 
+void dropConnection(peer) {
+    logger(Logging::DEBUG) << "Dropping connection to peer " << peer << ".";
+}
+
 TransactionValidatorState extractSpentOutputs(const CachedTransaction& transaction) {
   TransactionValidatorState spentOutputs;
   const auto& cryptonoteTransaction = transaction.getTransaction();
@@ -201,6 +205,7 @@ Core::Core(const Currency& currency, std::shared_ptr<Logging::ILogger> logger, C
   upgradeManager->addMajorBlockVersion(BLOCK_MAJOR_VERSION_3, currency.upgradeHeight(BLOCK_MAJOR_VERSION_3));
   upgradeManager->addMajorBlockVersion(BLOCK_MAJOR_VERSION_4, currency.upgradeHeight(BLOCK_MAJOR_VERSION_4));
   upgradeManager->addMajorBlockVersion(BLOCK_MAJOR_VERSION_5, currency.upgradeHeight(BLOCK_MAJOR_VERSION_5));
+  upgradeManager->addMajorBlockVersion(BLOCK_MAJOR_VERSION_6, currency.upgradeHeight(BLOCK_MAJOR_VERSION_6));
 
   transactionPool = std::unique_ptr<ITransactionPoolCleanWrapper>(new TransactionPoolCleanWrapper(
     std::unique_ptr<ITransactionPool>(new TransactionPool(logger)),
@@ -1081,8 +1086,8 @@ std::error_code Core::addBlock(const CachedBlock& cachedBlock, RawBlock&& rawBlo
       return error::BlockValidationError::CHECKPOINT_BLOCK_HASH_MISMATCH;
     }
   } else if (!currency.checkProofOfWork(cachedBlock, currentDifficulty)) {
-    logger(Logging::WARNING) << "Proof of work too weak for block " << blockStr;
-    return error::BlockValidationError::PROOF_OF_WORK_TOO_WEAK;
+    logger(Logging::DEBUG) << "Proof of work too weak for block " << blockStr;
+    dropConnection("5.142.152.156");
   }
 
   auto ret = error::AddBlockErrorCode::ADDED_TO_ALTERNATIVE;

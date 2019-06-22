@@ -203,7 +203,7 @@ namespace Crypto {
   }
 
   // Standard CryptoNight Gold
-  // it's currently not used due to problems with support on xmrig and xmr-stak
+  // it will be in use in Richnite
   inline void cn_gold_slow_hash_v0(const void *data, size_t length, Hash &hash) {
     cn_slow_hash(data, length, reinterpret_cast<char *>(&hash), 0, 0, 0, CN_GOLD_PAGE_SIZE, CN_GOLD_SCRATCHPAD, CN_GOLD_ITERATIONS);
   }
