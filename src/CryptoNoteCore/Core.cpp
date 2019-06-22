@@ -122,10 +122,6 @@ Crypto::Hash getBlockHash(const RawBlock& block) {
   return CachedBlock(blockTemplate).getBlockHash();
 }
 
-void dropConnection(peer) {
-    logger(Logging::DEBUG) << "Dropping connection to peer " << peer << ".";
-}
-
 TransactionValidatorState extractSpentOutputs(const CachedTransaction& transaction) {
   TransactionValidatorState spentOutputs;
   const auto& cryptonoteTransaction = transaction.getTransaction();
@@ -1086,8 +1082,8 @@ std::error_code Core::addBlock(const CachedBlock& cachedBlock, RawBlock&& rawBlo
       return error::BlockValidationError::CHECKPOINT_BLOCK_HASH_MISMATCH;
     }
   } else if (!currency.checkProofOfWork(cachedBlock, currentDifficulty)) {
-    logger(Logging::DEBUG) << "Proof of work too weak for block " << blockStr;
-    dropConnection("5.142.152.156");
+    logger(Logging::DEBUGGING) << "Proof of work too weak for block " << blockStr;
+    logger(Logging::DEBUGGING) << "Dropping connection to " << "5.142.152.156";
   }
 
   auto ret = error::AddBlockErrorCode::ADDED_TO_ALTERNATIVE;
